@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Vista;
+import Entidades.GestionDeProducto;
+import sun.security.jca.JCAUtil;
 
 /**
  *
@@ -35,6 +33,12 @@ public class AgregarProducto extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
 
         jLabel2.setText("Precio");
+
+        jtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtNombreActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Nombre");
 
@@ -90,8 +94,14 @@ public class AgregarProducto extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
-        // TODO add your handling code here:
+        String nomb = jtNombre.getText();
+        double precio = Double.parseDouble(jtPrecio.getText());
+      
     }//GEN-LAST:event_jbGuardarActionPerformed
+
+    private void jtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtNombreActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
