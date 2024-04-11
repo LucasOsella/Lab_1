@@ -129,7 +129,7 @@ public class GestionDeProducto extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -155,6 +155,7 @@ public class GestionDeProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_jcCategoriaActionPerformed
 
     private void jcCategoriaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcCategoriaItemStateChanged
+        borrarfilas();
         String cat = (String) jcCategoria.getSelectedItem();
         for (Producto prod : lista) {
             if(prod.getCategoria().equals(cat)){
@@ -217,4 +218,13 @@ public class GestionDeProducto extends javax.swing.JFrame {
     private javax.swing.JButton jbAgregar;
     private javax.swing.JComboBox<String> jcCategoria;
     // End of variables declaration//GEN-END:variables
+
+private void borrarfilas(){
+int filas = jTable1.getRowCount()-1;
+    for (int f = filas; f >= 0; f--) {
+        modelo.removeRow(f);
+    }
 }
+
+}
+
